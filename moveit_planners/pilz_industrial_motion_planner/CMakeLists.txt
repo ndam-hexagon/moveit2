@@ -65,9 +65,7 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
   geometry_msgs
   moveit_core
   moveit_msgs
-  moveit_ros_move_group
   moveit_ros_planning
-  moveit_ros_planning_interface
   pluginlib
   rclcpp
   tf2
