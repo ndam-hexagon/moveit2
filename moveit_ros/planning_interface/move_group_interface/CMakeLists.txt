@@ -6,14 +6,7 @@ generate_export_header(${MOVEIT_LIB_NAME})
 target_include_directories(${MOVEIT_LIB_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>)
 set_target_properties(${MOVEIT_LIB_NAME} PROPERTIES VERSION "${${PROJECT_NAME}_VERSION}")
 target_link_libraries(${MOVEIT_LIB_NAME} moveit_common_planning_interface_objects moveit_planning_scene_interface ${Boost_THREAD_LIBRARY})
-ament_target_dependencies(${MOVEIT_LIB_NAME}
-  moveit_core
-  moveit_msgs
-  moveit_ros_move_group
-  moveit_ros_occupancy_map_monitor
-  moveit_ros_planning
-  moveit_ros_warehouse
-)
+ament_target_dependencies(${MOVEIT_LIB_NAME} moveit_ros_warehouse)
 
 # TODO (ddengster) : port wrap_python_move_group
 #add_library(${MOVEIT_LIB_NAME}_python src/wrap_python_move_group.cpp)
